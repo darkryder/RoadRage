@@ -11,3 +11,10 @@ def coord_distance(lat1, lon1, latitude, longitude):
 
     distance = R * c
     return distance
+
+def _sort_accidents_dist(lat, lon):
+    def inner(accident):
+        return coord_distance(
+            lat, lon,
+            accident['location']['latitude'], accident['location']['longitude'])
+    return inner
