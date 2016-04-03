@@ -5,7 +5,7 @@ from utils import coord_distance, _sort_accidents_dist
 HEATMAP_RADIUS = 150
 HEATMAP_MIN_ACCIDENTS = 100
 
-PRONE_AREA_THRESHOLD = 95
+PRONE_AREA_THRESHOLD = 84
 PRONE_AREA_DISTANCE_ACCIDENTS_CHECK = 150
 
 data = None
