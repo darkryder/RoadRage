@@ -56,6 +56,10 @@ def nearest_accident():
         if dist < nearest_distance:
             nearest_accident = accident
             nearest_distance = dist
+    nearest_accident = dict(nearest_accident) # copy the accident
+    nearest_accident['latitude'] = nearest_accident['location']['latitude']
+    nearest_accident['longitude'] = nearest_accident['location']['longitude']
+
     return json.dumps(nearest_accident)
 
 if __name__ == "__main__":
